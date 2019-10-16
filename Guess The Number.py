@@ -5,7 +5,13 @@ print("Hello user, I'm thinking of a number between 1 and 100.\nYou have 15 gues
 guessUsed = 0
 
 while guessUsed < 15:
-    guess = int(input("What is your guess? "))
+    if guessUsed == 0:
+        guess = int(input("What is your first guess? "))
+    elif guessUsed == 14:
+        guess = int(input("What is your last guess? "))
+    else:
+        guess = int(input("What is your next guess? "))
+
     guessUsed += 1
 
     if guess > number:
